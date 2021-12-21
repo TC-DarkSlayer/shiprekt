@@ -138,7 +138,8 @@ void onTick(CBlob@ this)
 	}
 	else
 	{
-		Auto(this);
+		if (this.get_u16("ammo") == 0)
+			Auto(this);
 	}
 
 	if (isServer())
